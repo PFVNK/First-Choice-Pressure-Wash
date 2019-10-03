@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background-color: white;
+  background-color: #F5F5F1;
 }
 
 html {
@@ -37,7 +37,7 @@ html {
   width: 100vw;
   height: 60vh;
   overflow: hidden;
-  background-color: rgba(34, 49, 63, .9);
+  background-color: rgba(103, 111, 127, .9);
   z-index: 1;
 }
 
@@ -70,6 +70,7 @@ html {
     padding: 10;
     margin-left: 10px;
     margin-right: 30px;
+    color: #C38375
   }
 
   .nav-links {
@@ -82,6 +83,10 @@ html {
     display: flex;
     justify-content: flex-end;
     // margin-left: 150px;
+
+    li {
+      cursor: pointer;
+    }
   }
 
   .nav-item a {
@@ -98,11 +103,12 @@ html {
     padding: 6px 10px;
     letter-spacing: 0.3em;
     background-color: transparent;
-    color: white;
+    color: #C38375;
     border: solid 1px white;
     border-width: thin;
     border-radius: 10px;
-    border-color: rgba(255, 255, 255, .3)
+    border-color: rgba(255, 255, 255, .3);
+    cursor: pointer;
   }
 }
 
@@ -191,7 +197,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-align: center;
   align-items: center;
   background: transparent;
-  color: white;
+  color: #F5F5F1;
   transition: ease all 1ms;
   // border: solid yellow;
 
@@ -205,7 +211,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   p:nth-child(2) {
-    color: rgba(82, 179, 217, 1);
+    color: rgba(223, 220, 212, 1);
   }
 }
 
@@ -326,6 +332,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     align-items: center;
     height: 5em;
     width: 50vw;
+    color: #676F7F;
   }
 
   .footer-icon-container {
@@ -346,32 +353,33 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .footer-icons .footer-phone-icon {
   color: white;
-  font-size: 2.5em;
-  color: black;
+  font-size: 1.7em;
+  color: #676F7F;
+  ;
 }
 
 span .footer-phone-number {
   text-decoration: none;
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   color: black;
 }
 
 .footer-icons .footer-twitter-icon {
   color: white;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #00aced;
 }
 
 .footer-icons .footer-instagram-icon {
   color: white;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #ffdc80;
 }
 
 .footer-icons .footer-facebook-icon {
   color: white;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #4267b2;
 }
 
@@ -404,7 +412,8 @@ div .slider-wrapper .axis-vertical {
 .homepage-blurb {
   margin-top: 40px;
   display: none;
-  color: black;
+  color: #676F7F;
+  ;
 }
 
 .homepage-blurb p h1 {
@@ -416,6 +425,74 @@ div .slider-wrapper .axis-vertical {
 
 .homepage-blurb h1 {
   margin-top: -0.1px;
+}
+
+.quote-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(66, 67, 71);
+  background: linear-gradient(0deg, rgba(66, 67, 71, 1) 0%, rgba(103, 111, 127, 1) 100%);
+}
+
+.quote-headline h1 {
+  color: #424347;
+}
+
+.quote-form-container {
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  margin-bottom: 50px;
+  // border: solid white;
+
+  form {
+    width: 30vw;
+
+    input {
+      padding: 0;
+      margin: 0;
+      width: 30vw;
+      height: 7vh;
+      border-radius: 5px;
+      border: solid black .03px;
+      border: .05;
+      margin-top: 15px;
+      font-size: 1.7em;
+      background-color: #F5F5F1;
+    }
+
+    input::placeholder {
+      font-size: 2vmin;
+    }
+
+    textarea {
+      height: 14vh;
+      width: 29.6vw;
+      border-radius: 5px;
+      border: .05;
+      margin-top: 15px;
+      font-size: 1.7em;
+      background-color: #F5F5F1;
+    }
+
+    textarea::placeholder {
+      font-size: 2vmin;
+    }
+
+    input.quote-form-button {
+      cursor: pointer;
+      background-color: #C38375;
+      border: none;
+      font-size: 2vmin;
+    }
+  }
 }
 
 // MEDIA MEDIA MEDIA
@@ -531,6 +608,22 @@ div .slider-wrapper .axis-vertical {
     .homepage-hero-item-location {
       width: 16em;
       height: 25em;
+    }
+  }
+
+  .quote-form-container {
+    width: 50vw;
+
+    form {
+      width: 50vw;
+
+      input {
+        width: 50vw;
+      }
+
+      textarea {
+        width: 49.6vw;
+      }
     }
   }
 }
@@ -883,6 +976,22 @@ div .slider-wrapper .axis-vertical {
     width: 90% !important;
     margin: 0 auto;
   }
+
+  .quote-form-container {
+    width: 65vw;
+
+    form {
+      width: 65vw;
+
+      input {
+        width: 65vw;
+      }
+
+      textarea {
+        width: 64vw;
+      }
+    }
+  }
 }
 
 @media(max-width: 550px) {
@@ -1174,6 +1283,35 @@ div .slider-wrapper .axis-vertical {
     top: 13px;
     width: 20px;
     height: 13px;
+  }
+
+  .quote-form-container {
+    width: 80vw;
+    margin-bottom: 110px;
+
+    form {
+      width: 80vw;
+
+      input {
+        width: 80vw;
+      }
+
+      input::placeholder {
+        font-size: 3.5vmin;
+      }
+
+      textarea {
+        width: 78.6vw;
+      }
+
+      textarea::placeholder {
+        font-size: 3.5vmin;
+      }
+
+      input.quote-form-button {
+        font-size: 3.5vmin;
+      }
+    }
   }
 }
 
