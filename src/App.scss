@@ -148,7 +148,9 @@ Sidebar wrapper styles
 Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
 */
 .bm-menu-wrap {
-  position: fixed;
+  position: absolute;
+  right: 0;
+  top: 0;
   height: 100vh !important;
 }
 
@@ -157,6 +159,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  height: 100vh !important;
+  overflow: hidden !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -180,6 +184,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  height: 100vh !important;
 }
 
 .homepage-container {
@@ -324,7 +329,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   width: 100vw;
   height: 11vh;
-  z-index: 500;
+  z-index: 2;
 
   .footer-phone-container {
     display: flex;
@@ -436,6 +441,36 @@ div .slider-wrapper .axis-vertical {
   align-items: center;
   background: rgb(66, 67, 71);
   background: linear-gradient(0deg, rgba(66, 67, 71, 1) 0%, rgba(103, 111, 127, 1) 100%);
+  color: #C38375;
+
+  .service-list {
+    // border: solid red;
+    height: 65vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 10vmin;
+    padding: 0 500px;
+    white-space: nowrap;
+
+    ul {
+      li {
+        margin-bottom: 30px;
+      }
+    }
+
+    .service-col-one {
+      // border: solid yellow;
+      grid-column: 1/2;
+    }
+
+    .service-col-two {
+      // border: solid pink;
+      grid-column: 2/3;
+    }
+  }
 }
 
 .quote-headline h1 {
@@ -540,6 +575,12 @@ div .slider-wrapper .axis-vertical {
       font-size: 4vh;
     }
   }
+
+  .quote-container {
+    .service-list {
+      font-size: 8vmin;
+    }
+  }
 }
 
 @media(max-width: 1100px) {
@@ -623,6 +664,18 @@ div .slider-wrapper .axis-vertical {
 
       textarea {
         width: 49.6vw;
+      }
+    }
+  }
+
+  .quote-container {
+    .service-list {
+      font-size: 6vmin;
+
+      ul {
+        li {
+          margin-bottom: 70px;
+        }
       }
     }
   }
@@ -730,7 +783,7 @@ div .slider-wrapper .axis-vertical {
     flex-wrap: wrap;
     width: 100vw;
     height: 20vh;
-    z-index: 500;
+    z-index: 1;
 
     .footer-phone-container {
       display: flex;
@@ -1083,6 +1136,19 @@ div .slider-wrapper .axis-vertical {
     top: 13px;
     width: 24px;
     height: 18px;
+  }
+
+  .quote-container {
+    .service-list {
+      display: unset;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 40px;
+        }
+      }
+    }
   }
 }
 

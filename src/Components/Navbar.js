@@ -15,22 +15,27 @@ function Navbar() {
       <MediaQuery query='(max-width: 1054px)'>
         <Menu right>
           <ul className="nav-links">
-            <li className="nav-item"><a href="#"><FontAwesomeIcon icon={faHome} size='1x' className='icon' />HOME</a></li>
-            <li className="nav-item"><a href="#"><FontAwesomeIcon icon={faInfoCircle} size='1x' className='icon' />RESIDENTIAL</a></li>
-            <li className="nav-item"><a href="#"><FontAwesomeIcon icon={faImage} size='1x' className='icon' />COMMERCIAL</a></li>
+            <Link to='/'><li className="nav-item"><a href="#"><FontAwesomeIcon icon={faHome} size='1x' className='icon' />HOME</a></li></Link>
+            <Link to='/residential'><li className="nav-item"><a href="#"><FontAwesomeIcon icon={faInfoCircle} size='1x' className='icon' />RESIDENTIAL</a></li></Link>
+            <Link to='/commercial'><li className="nav-item"><a href="#"><FontAwesomeIcon icon={faImage} size='1x' className='icon' />COMMERCIAL</a></li></Link>
           </ul>
-          <button>GET QUOTE</button>
+          <Link to='/quote'>
+            <button>GET QUOTE</button>
+          </Link>
+
         </Menu>
       </MediaQuery>
       <MediaQuery query='(min-width: 1054px)'>
-        <ul class="nav-links">
-          <li className="nav-item" tag={Link} to='/'><a>HOME</a></li>
-          <li className="nav-item" tag={Link} to='/residential'><a href="#">RESIDENTIAL</a></li>
-          <li className="nav-item" tag={Link} to='/commercial'><a href="#">COMMERCIAL</a></li>
+        <ul className="nav-links">
+          <Link to='/'><li className="nav-item"><a>HOME</a></li></Link>
+          <Link to='/residential'><li className="nav-item"><a href="#">RESIDENTIAL</a></li></Link>
+          <Link to='/commercial'><li className="nav-item"><a href="#">COMMERCIAL</a></li></Link>
         </ul>
-        <button component={Link} to='/quote'>GET QUOTE</button>
+        <Link to='/quote'>
+          <button>GET QUOTE</button>
+        </Link>
       </MediaQuery>
-    </div>
+    </div >
   )
 }
 

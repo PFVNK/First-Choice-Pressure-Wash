@@ -6,6 +6,8 @@ import Navbar from './Components/Navbar'
 import Homepage from "./Components/Homepage"
 import Quote from './Components/Quote'
 import Footer from './Components/Footer'
+import Residential from './Components/Residential'
+import Commercial from './Components/Commercial'
 
 import './App.scss';
 
@@ -84,6 +86,14 @@ export default class App extends Component {
           <Route
             path='/' exact
             render={(props) => (<Homepage />)}
+          />
+          <Route
+            path='/residential'
+            render={(props) => (<Residential />)}
+          />
+          <Route
+            path='/commercial'
+            render={(props) => (<Commercial />)}
           />
           <Route
             path='/quote' exact
