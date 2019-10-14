@@ -20,8 +20,21 @@ export default class App extends Component {
       quotePhoneNumber: '',
       quoteEmail: '',
       quoteCity: '',
-      quoteSpecifics: ''
+      quoteSpecifics: '',
+      menuOpen: false
     }
+  }
+
+  handleStateChange = (state) => {
+    this.setState({ menuOpen: state.isOpen })
+  }
+
+  closeMenu = () => {
+    this.setState({ menuOpen: false })
+  }
+
+  toggleMenu = () => {
+    this.setState(state => ({ menuOpen: !state.menuOpen }))
   }
 
   handleChange = (event) => {
@@ -81,7 +94,12 @@ export default class App extends Component {
         <div className="App">
           <Route
             path='/'
-            render={(props) => (<Navbar />)}
+            render={(props) => (<Navbar
+              menuOpen={this.state.menuOpen}
+              closeMenu={this.closeMenu}
+              handleStateChange={this.handleStateChange}
+              toggleMenu={this.toggleMenu}
+            />)}
           />
           <Route
             path='/' exact
