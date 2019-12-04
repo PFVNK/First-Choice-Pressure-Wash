@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-import dirtyhouse from '../dirtyhouse.jpg'
-import cleanhouse from '../cleanhouse.jpg'
-import cleansidewalk from '../cleansidewalk.jpg'
-import dirtysidewalk from '../dirtysidewalk.jpg'
-import cleansidehouse from '../cleansidehouse.jpg'
-import dirtysidehouse from '../dirtysidehouse.jpg'
+import dirtydriveway from '../dirtydriveway.jpg'
+import cleandriveway from '../cleandriveway.jpg'
+import dirtydrivewayfar from '../dirtydrivewayfar.jpg'
+import cleandrivewayfar from '../cleandrivewayfar.jpg'
 
 
 class CarouselView extends Component {
@@ -15,19 +13,19 @@ class CarouselView extends Component {
     return (
       <Carousel infiniteLoop autoPlay width='100%' showStatus={false} showThumbs={false} showArrows={false} showIndicators={false}>
         <div>
-          <img src={dirtyhouse} />
+          <img src={cleandriveway} />
           <p className="legend">Before</p>
         </div>
         <div>
-          <img src={cleanhouse} />
+          <img src={dirtydriveway} />
           <p className="legend">After</p>
         </div>
         <div>
-          <img src={dirtysidehouse} />
+          <img src={cleandrivewayfar} />
           <p className="legend">Before</p>
         </div>
         <div>
-          <img src={cleansidehouse} />
+          <img src={dirtydrivewayfar} />
           <p className="legend">After</p>
         </div>
       </Carousel>
