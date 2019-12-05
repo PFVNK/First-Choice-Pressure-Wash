@@ -105,14 +105,14 @@ export default class App extends Component {
             path='/' exact
             render={(props) => (<Homepage />)}
           />
-          <Route
-            path='/residential'
+          {/* <Route
+            path='/residential' exact
             render={(props) => (<Residential />)}
           />
           <Route
-            path='/commercial'
+            path='/commercial' exact
             render={(props) => (<Commercial />)}
-          />
+          /> */}
           <Route
             path='/quote' exact
             render={(props) => (<Quote

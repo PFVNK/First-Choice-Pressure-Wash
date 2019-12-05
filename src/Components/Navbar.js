@@ -17,8 +17,8 @@ class Navbar extends Component {
           <Menu right isOpen={this.props.menuOpen} onStateChange={(props) => this.props.handleStateChange(props)}>
             <ul className="nav-links">
               <Link to='/'><li className="nav-item"><a onClick={() => this.props.closeMenu()} href="#"><FontAwesomeIcon icon={faHome} size='1x' className='icon' />HOME</a></li></Link>
-              <Link to='/residential'><li className="nav-item"><a onClick={() => this.props.closeMenu()} href="#"><FontAwesomeIcon icon={faInfoCircle} size='1x' className='icon' />RESIDENTIAL</a></li></Link>
-              <Link to='/commercial'><li className="nav-item"><a onClick={() => this.props.closeMenu()} href="#"><FontAwesomeIcon icon={faImage} size='1x' className='icon' />COMMERCIAL</a></li></Link>
+              {/* <Link to='/residential'><li className="nav-item"><a onClick={() => this.props.closeMenu()} href="#"><FontAwesomeIcon icon={faInfoCircle} size='1x' className='icon' />RESIDENTIAL</a></li></Link>
+              <Link to='/commercial'><li className="nav-item"><a onClick={() => this.props.closeMenu()} href="#"><FontAwesomeIcon icon={faImage} size='1x' className='icon' />COMMERCIAL</a></li></Link> */}
             </ul>
             <Link to='/quote'>
               <button onClick={() => this.props.closeMenu()}>GET QUOTE</button>
@@ -29,8 +29,8 @@ class Navbar extends Component {
         <MediaQuery query='(min-width: 1054px)'>
           <ul className="nav-links">
             <Link to='/'><li className="nav-item"><a>HOME</a></li></Link>
-            <Link to='/residential'><li className="nav-item"><a href="#">RESIDENTIAL</a></li></Link>
-            <Link to='/commercial'><li className="nav-item"><a href="#">COMMERCIAL</a></li></Link>
+            {/* <Link to='/residential'><li className="nav-item"><a href="#">RESIDENTIAL</a></li></Link>
+            <Link to='/commercial'><li className="nav-item"><a href="#">COMMERCIAL</a></li></Link> */}
           </ul>
           <Link to='/quote'>
             <button>GET QUOTE</button>
